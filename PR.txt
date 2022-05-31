@@ -1,0 +1,51 @@
+Guilherme da Silva Amorim Martins - PG47225
+TesteRPCW - Representação e Processamento de Conhecimento na Web
+31/05/2022
+
+Exercicio 1
+
+No processo de "Data cleansing", optei por filtrar a informação organizando-a nos ficheiros "cidades.json"
+e "ligações.json".
+Para a criação da base de dados MAPA2022, comecei por correr os comandos que fomos aprendendo ao longo das 
+aulas para inicializar o mongo e de seguida dar import aos ficheiros json para lá, para depois poder criar 
+uma collection tanto para as cidades como para as ligações. Depois, bastou me correr "npx express-generator 
+--view=pug mapa" para construir o meu servidor.
+Finalmente, criei um servidor nodejs que desse suporte à API de dados fornecida que fica a correr na porta
+3050 a partir do comando "npm start".
+
+Exercício 2
+
+Em relação ao aquecimento, obtive as seguintes respostas ao testar a API de dados com o Postman:
+
+    1-> length=18, jsonList= [
+        '750.10.001', 
+        '750.10.002', 
+        '750.10.300', 
+        '750.10.600', 
+        '750.10.601', 
+        '750.10.602', 
+        '750.20.001', 
+        '750.20.002', 
+        '750.20.003', 
+        '750.20.300', 
+        '750.20.301', 
+        '750.20.600', 
+        '750.20.601', 
+        '750.30.001', 
+        '750.30.300', 
+        '750.30.600', 
+        '750.30.601', 
+        '750.30.602'
+        ]
+
+    2-> 647 entidades
+
+    3-> 7 processos
+
+    4-> 24 processos
+
+Comecei por fazer um POST em http://clav-api.di.uminho.pt/v2/users/login com username "rpcw2022@gmail.com" e
+password "2022" onde obtive o token que está armazenado na variável apikey do meu ficheiro "index.js".
+Para o tratamento de todas as alineas pedidas executei o comando "npx express-generator --view=pug classestermos"
+e, finalmente, novamente através do comando "npm start" consigo pôr a minha aplicação a correr em nodemon na 
+porta 3050.

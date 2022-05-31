@@ -23,7 +23,7 @@ router.get('/classes', function(req, res, next) {
 });
 
 
-router.get('/classes/:code', function(req, res, next) {
+router.get('/classes/:codigo', function(req, res, next) {
   al = req.params.code
   axios.get("http://clav-api.di.uminho.pt/v2/classes/c" + al + "?apikey=" + apikey)
     .then(response => {
@@ -37,7 +37,7 @@ router.get('/classes/:code', function(req, res, next) {
       })
 });
 
-router.get('/termos', function(req, res, next) {
+router.get('/termosIndice', function(req, res, next) {
   al = req.params.code
   axios.get("http://clav-api.di.uminho.pt/v2/termosIndice?apikey=" + apikey)
     .then(response => {
